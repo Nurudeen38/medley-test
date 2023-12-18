@@ -15,7 +15,7 @@ export const rtkQueryErrorLogger: Middleware =
         Object.values(errors).map((error: any) => {
           return error.map((err: string) => displayErrorMessage(err));
         });
-      } else if (action.payload.data.error) {
+      } else if (action?.payload?.data?.error) {
         displayErrorMessage(`${action.payload.data.error.message}`);
       } else {
         displayErrorMessage(`Something went wrong`);

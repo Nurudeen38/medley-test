@@ -1,11 +1,11 @@
 import { axiosBaseQuery } from '@/api/interceptor/axiosBaseQuery';
 import { createApi } from '@reduxjs/toolkit/dist/query/react';
 
-export const jsonPlaceHolderApi = createApi({
+export const medleyApi = createApi({
   baseQuery: axiosBaseQuery({
-    baseUrl: `https://jsonplaceholder.typicode.com`,
+    baseUrl: `https://theseus-staging.lithium.ventures/api/v1/analytics/tech-test`,
   }),
   endpoints: () => ({}),
-  reducerPath: 'jsonPlaceHolderApi',
+  reducerPath: 'medleyApi',
   tagTypes: [],
 });

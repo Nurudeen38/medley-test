@@ -1,6 +1,10 @@
 import styled from "styled-components"
 
-const Title = styled.h1`
+export const Main = styled.main`
+padding: 2rem;
+`
+
+export const Title = styled.h1`
   font-size: 2.5em;
   font-family: sans-serif;
   margin-top: 0;
@@ -8,26 +12,38 @@ const Title = styled.h1`
   color: #040529;
 `;
 
-const SubTitle = styled(Title)`
+
+export const SubTitle = styled(Title)`
   font-size: 1.5em;
   font-family: sans-serif;
   background: #fff;
   padding: .8rem 1rem;
-  border-left: 1rem solid #4caf50;
+  border-left: 1rem solid #999DFF;
   border-top-left-radius: .3rem;
   border-bottom-left-radius: .3rem;
-  box-shadow: 0 0 5px 0px #d5d5d5;
 `;
-const Container = styled.div`
+
+export const Container = styled.div`
   padding: 2rem;
 `
-const Flex = styled.div`
+
+export const Caption = styled.caption`
+display: table-caption;
+justify-content:space-between
+`
+
+export const CaptionContainer = styled.div`
+display: flex;
+justify-content: space-between;
+align-items: center;
+`
+export const Flex = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 `
-const Select = styled.select`
+export const Select = styled.select`
     display: block;
     width: 100%;
     max-width: 150px;
@@ -54,12 +70,12 @@ const Select = styled.select`
       box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, .25);
     }
 `
-const SearchBox = styled.div`
+export const SearchBox = styled.div`
   position: relative;
   width: 100%;
   max-width: 300px;
 `
-const SearchInput  = styled.input`
+export const SearchInput  = styled.input`
   width: calc(100% - 2.8rem);
   padding: .6rem .6rem .6rem 2rem;
   border-radius: 4px;
@@ -73,12 +89,12 @@ const SearchInput  = styled.input`
     color: #212529;
   }
 `
-const SearchIcon = styled.i`
+export const SearchIcon = styled.i`
   position: absolute;
   top: .65rem;
   left: .5rem;
 `
-const Table = styled.table`
+export const Table = styled.table`
   width: 100%;
   margin-top: .8rem;
   margin-bottom: 1rem;
@@ -87,37 +103,39 @@ const Table = styled.table`
   border-radius: .2rem;
   overflow: hidden;
 `
-const Thead = styled.thead``
-const Tbody = styled.tbody``
-const ThRow = styled.tr`
-  background: #0d6efd;
+export const Thead = styled.thead``
+
+export const Tbody = styled.tbody``
+
+export const ThRow = styled.tr`
+
 `
-const Trow = styled.tr<{isEven?: boolean;}>`
+export const Trow = styled.tr<{isEven?: boolean;}>`
   background: ${props => props.isEven ? '#f2f2f2' : '#ffffff'};
   &:hover {
     background: #f2f2f2;
   }
 `
-const Th = styled.th`
+export const Th = styled.th`
   padding: 0.5rem 0.5rem;
-  border-bottom: 1px solid #ccc;
-  color: #fff;
+  color: black;
 `
-const Td = styled.td`
+export const Td = styled.td`
   padding: 0.5rem 0.5rem;
-  border-bottom: 1px solid #ccc;
   cursor: pointer;
   text-align: center;
 `
-const Pagination = styled.ul`
+export const Pagination = styled.ul`
   display: flex;
   padding-left: 0;
   list-style: none;
   align-items: center;
   justify-content: center
 `
-const PageItem = styled.li``
-const PageLink = styled.a<{isDisable?: boolean; isActive?: boolean}>`
+
+export const PageItem = styled.li``
+
+export const PageLink = styled.a<{isDisable?: boolean; isActive?: boolean}>`
   position: relative;
   padding: 0.375rem 0.75rem;
   display: block;
@@ -126,7 +144,8 @@ const PageLink = styled.a<{isDisable?: boolean; isActive?: boolean}>`
   cursor: ${props => props.isDisable ? 'not-allowed' : 'pointer'};
   border: 1px solid #dee2e6;
 `
-const Badge = styled.span<{status?: string;}>`
+
+export const Badge = styled.span<{status?: string;}>`
   border-radius: 50rem;
   background: ${props => props.status === 'Pending' ? 'linear-gradient(0deg, #f59fa7, red);' : 'linear-gradient(0deg, #53c38f, #006100);'};
   color: #fafafa;

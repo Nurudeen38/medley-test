@@ -1,1 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+.pagination-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .pagination-container { 
+    width:100%;
+    margin-top: 2rem;
+    justify-content: center;
+    display: flex;
+    list-style-type: none;
+  
+    .pagination-item {
+      padding: 0 12px;
+      height: 32px;
+      text-align: center;
+      margin: auto 4px;
+      color: #8c8da8;
+      display: flex;
+      box-sizing: border-box;
+      align-items: center;
+      letter-spacing: 0.01071em;
+      border-radius: 16px;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      min-width: 32px;
+  
+      &.dots:hover {
+        background-color: transparent;
+        cursor: default;
+      }
+  
+      &:hover {
+        cursor: pointer;
+      }
+  
+      &.selected {
+        color: #333333;
+        background: #ffe3d4;
+        font-size: 24px;
+        line-height: 29px;
+      }
+  
+      &.disabled {
+        pointer-events: none;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+.badge > p {
+    background-color: red;
+}
