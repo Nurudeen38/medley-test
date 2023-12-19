@@ -61,7 +61,7 @@ export default function Home() {
 
   const pageCount =
     Math.floor((query.data?.metadata?.totalCount || 0) / Number(limit)) ||
-    query.data?.length ||
+    Math.floor((query.data?.length || 0) / Number(limit)) ||
     0;
 
   const payoutData =
@@ -76,6 +76,7 @@ export default function Home() {
   };
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPageNo(1);
     setSearchTerm(e.target.value);
   };
 
@@ -97,6 +98,7 @@ export default function Home() {
         />
       </SubHeaderContainer>
       <Table
+        isClientPagination={!!debouncedSearch}
         rows={payoutData || []}
         columns={payoutColumns}
         isLoading={isLoading}

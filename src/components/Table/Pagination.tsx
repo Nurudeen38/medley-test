@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
-import LeftArrow from "@/asssets/icons/pag-arrow-left.svg"
-import RightArrow from "@/asssets/icons/pag-arrow-right.svg"
+import LeftArrow from '@/asssets/icons/pag-arrow-left.svg';
+import RightArrow from '@/asssets/icons/pag-arrow-right.svg';
 import { usePagination, DOTS } from '@/hooks/usePagination';
 import Image from 'next/image';
 
@@ -12,13 +12,8 @@ type PaginationProps = {
   className: string;
 };
 
-const Pagination = (props:PaginationProps) => {
-  const {
-    onPageChange,
-    totalPageCount,
-    currentPage,
-    className,
-  } = props;
+const Pagination = (props: PaginationProps) => {
+  const { onPageChange, totalPageCount, currentPage, className } = props;
 
   const paginationRange = usePagination({
     currentPage,
@@ -38,23 +33,25 @@ const Pagination = (props:PaginationProps) => {
   };
 
   const lastPage = paginationRange[paginationRange.length - 1];
-  
+
   return (
     <ul
       className={classnames('pagination-container mt-6', {
         [className]: className,
-      })}>
+      })}
+    >
       <li
         className={classnames('pagination-item !p-0', {
           disabled: currentPage === 1,
         })}
-        onClick={onPrevious}>
-        <Image className='h-18 w-18' src={LeftArrow} alt='left' />
+        onClick={onPrevious}
+      >
+        <Image className="h-18 w-18" src={LeftArrow} alt="left" />
       </li>
       {paginationRange?.map((pageNumber, index) => {
         if (pageNumber === DOTS) {
           return (
-            <li key={index} className='pagination-item dots'>
+            <li key={index} className="pagination-item dots">
               &#8230;
             </li>
           );
@@ -67,7 +64,8 @@ const Pagination = (props:PaginationProps) => {
               className={classnames('pagination-item', {
                 selected: pageNumber === currentPage,
               })}
-              onClick={() => onPageChange(pageNumber)}>
+              onClick={() => onPageChange(pageNumber)}
+            >
               {pageNumber}
             </li>
           );
@@ -76,8 +74,9 @@ const Pagination = (props:PaginationProps) => {
         className={classnames('pagination-item !p-0', {
           disabled: currentPage === lastPage,
         })}
-        onClick={onNext}>
-        <Image className='h-18 w-18' src={RightArrow} alt='right' />
+        onClick={onNext}
+      >
+        <Image className="h-18 w-18" src={RightArrow} alt="right" />
       </li>
     </ul>
   );

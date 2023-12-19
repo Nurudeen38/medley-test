@@ -26,6 +26,7 @@ type Props<T> = {
   handlePageChange: (e: number) => void;
   totalPageCount: number;
   limit: string;
+  isClientPagination: boolean;
 };
 
 const Table = <T extends { username?: string }>({
@@ -35,7 +36,16 @@ const Table = <T extends { username?: string }>({
   pageNo,
   handlePageChange,
   totalPageCount,
+  isClientPagination,
+  limit,
 }: Props<T>) => {
+  const currentData = isClientPagination
+    ? rows.slice(
+        (pageNo - 1) * Number(limit),
+        (pageNo - 1) * Number(limit) + Number(limit)
+      )
+    : rows;
+
   return (
     <>
       <Wrapper>
@@ -54,7 +64,7 @@ const Table = <T extends { username?: string }>({
                 <EmptyTable colSpan={4}>No data</EmptyTable>
               </tr>
             )}
-            {rows?.map((row) => {
+            {currentData?.map((row) => {
               return (
                 <Trow key={row.username}>
                   {columns.map((column) => {
