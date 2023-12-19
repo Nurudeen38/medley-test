@@ -2,7 +2,7 @@ import { format, parseISO } from 'date-fns';
 
 export function formatDate(date: string) {
   const parsedDate = parseISO(date);
-  const formattedDate = format(parsedDate, 'E, MMM dd');
+  const formattedDate = format(parsedDate, 'E, MMM dd, HH:mm');
  
   return formattedDate;
 }
