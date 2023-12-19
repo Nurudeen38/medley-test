@@ -1,3 +1,4 @@
+import React from 'react'
 import { toast } from "react-toastify";
 import { AiOutlineClose } from "react-icons/ai";
 import { PiWarningCircleLight } from "react-icons/pi";

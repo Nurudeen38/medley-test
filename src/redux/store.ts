@@ -1,7 +1,7 @@
-import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import {  configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
-import { persistReducer } from 'redux-persist';
-import customStorage from './cutomStorage';
+// import { persistReducer } from 'redux-persist';
+// import customStorage from './cutomStorage';
 import { customLogger } from './middlewares/customLogger';
 import { rtkQueryErrorLogger } from './middlewares/rtkQueryErrorLogger';
 import { medleyApi } from '@/api/baseQueries';
