@@ -6,6 +6,12 @@ The application has been developed using a combination of React, Typescript, and
 ## Prerequisites
   Install Node.js v18 or higher to start the project
 
+
+
+### Getting Started
+1. Clone the repository
+2. Install dependencies using `npm install`
+
 ### How to Run
 To run the application, use the following command:
 ```bash
@@ -14,6 +20,7 @@ npm run dev
 
 ### Technologies Used
 - React
+- Redux & Redux Toolkit
 - Typescript
 - Styled Components
 - Axios
@@ -24,11 +31,3 @@ npm run dev
 - Client-side pagination for search
 - Custom hooks for fetch and search data
 - Use of useEffect, useCallback, and useDebounce hooks
-
-### Getting Started
-1. Clone the repository
-2. Install dependencies using `npm install`
-3. Run the application using `npm start`
-
-### Additional Notes
-Make sure to handle continuous events such as over-click on pagination and user input on search fields using useDebounce to prevent unnecessary actions.
