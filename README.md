@@ -1,7 +1,10 @@
 **Project Name: Payout History Application**
 
 ### Summary
-This application is built using React, Typescript, and Styled Components. It includes a payout history page with server-side pagination for fetch and client-side pagination for search. The application uses custom hooks for fetching and searching data, axios for backend communication, and various React hooks such as useEffect, useCallback, and useDebounce.
+The application has been developed using a combination of React, Typescript, and Styled Components. It features a payout history section that utilizes server-side pagination for fetching data and client-side pagination for search functionality. To enhance data retrieval and search operations, custom hooks have been employed, leveraging axios for seamless communication with the backend. Furthermore, the application employs a range of React hooks like useEffect, useCallback, and useDebounce to manage component lifecycle, optimize performance, and handle search input debounce functionality effectively.
+
+## Prerequisites
+  Install Node.js v18 or higher to start the project
 
 ### How to Run
 To run the application, use the following command:
