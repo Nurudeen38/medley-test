@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import displayErrorMessage from '@/utils/displayErrorMessage';
 import { isRejectedWithValue } from '@reduxjs/toolkit';
 import type { MiddlewareAPI, Middleware } from '@reduxjs/toolkit';
@@ -7,6 +8,7 @@ import type { MiddlewareAPI, Middleware } from '@reduxjs/toolkit';
  */
 
 export const rtkQueryErrorLogger: Middleware =
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   (api: MiddlewareAPI) => (next) => (action) => {
     if (isRejectedWithValue(action)) {
       const errors = action.payload.data?.errors;
