@@ -6,8 +6,6 @@ The application has been developed using a combination of React, Typescript, and
 ## Prerequisites
   Install Node.js v18 or higher to start the project
 
-
-
 ### Getting Started
 1. Clone the repository
 2. Install dependencies using `npm install`
