@@ -12,8 +12,9 @@
   list-style-type: none;
 
   .pagination-item {
-    padding: 0 12px;
+    padding: 4px 8px;
     height: 32px;
+    text-align: center;
     text-align: center;
     margin: auto 4px;
     color: #8c8da8;
