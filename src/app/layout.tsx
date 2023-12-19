@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import NextTopLoader from 'nextjs-toploader';
 import { Providers } from '@/redux/providers';
+import StyledComponentsRegistry from '../lib/registry';
 
 import '@/styles/globals.css';
 
@@ -10,9 +11,7 @@ export const metadata: Metadata = {
   description: 'Dashboard Details',
 };
 
-
 const inter = Inter({ subsets: ['latin'] });
-
 
 export default function RootLayout({
   children,
@@ -24,7 +23,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <NextTopLoader color="#004CCC" height={4} showSpinner={false} />
         <Providers>
-            {children}
+          <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
         </Providers>
       </body>
     </html>
