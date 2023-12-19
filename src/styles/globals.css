@@ -222,3 +222,11 @@
   align-items: center;
   justify-content: center;
 }
+
+.h-18 {
+  height: 48px;
+}
+
+.w-18 {
+  width: 48px;
+}
