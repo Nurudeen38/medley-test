@@ -42,6 +42,7 @@ const payoutColumns = [
   {
     accessor: 'username',
     label: 'Username',
+    format: (value: string) => (value ? value : '--'),
   },
 ];
 

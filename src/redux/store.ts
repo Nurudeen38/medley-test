@@ -6,16 +6,16 @@ import { customLogger } from './middlewares/customLogger';
 import { rtkQueryErrorLogger } from './middlewares/rtkQueryErrorLogger';
 import { medleyApi } from '@/api/baseQueries';
 
-const rootReducer = combineReducers({});
+// const rootReducer = combineReducers({});
 
-const persistedReducers = persistReducer(
-  {
-    key: 'medley/api',
-    version: 1,
-    storage: customStorage,
-  },
-  rootReducer
-);
+// const persistedReducers = persistReducer(
+//   {
+//     key: 'medley/api',
+//     version: 1,
+//     storage: customStorage,
+//   },
+//   rootReducer
+// );
 
 const middleWares = [
   rtkQueryErrorLogger,
@@ -26,7 +26,7 @@ const middleWares = [
 export const store = configureStore({
   reducer: {
     [medleyApi.reducerPath]: medleyApi.reducer,
-    persistedReducers,
+    // persistedReducers,
   },
 
   middleware: (getDefaultMiddleware) => {

@@ -6,7 +6,7 @@ This application is built using React, Typescript, and Styled Components. It inc
 ### How to Run
 To run the application, use the following command:
 ```bash
-npm start
+npm run dev
 ```
 
 ### Technologies Used
