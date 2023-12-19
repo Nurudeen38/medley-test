@@ -7,18 +7,21 @@ interface Payout {
   username: string;
 }
 
-type PayoutResponse = {
+type PayoutByPageResponse = {
   metadata: { page: number; limit: number; totalCount: number };
   data: Payout[];
 };
+type PayoutBySearchResponse = Payout[];
 
-type PayoutParams = { search?: string; page: number;limit?:string };
+type PayoutResponse = PayoutByPageResponse & PayoutBySearchResponse;
+type PayoutParams = { search?: string; page: number; limit?: string };
 
 export const getPayout = medleyApi.injectEndpoints({
   endpoints: (builder) => ({
     getPayoutList: builder.query<PayoutResponse, PayoutParams>({
-      query: ({search,...params}) => ({
-        url: search && search.length > 0 ? `/search?query=${search}` : `/payouts`,
+      query: ({ search, ...params }) => ({
+        url:
+          search && search.length > 0 ? `/search?query=${search}` : `/payouts`,
         params,
       }),
     }),

@@ -4,16 +4,13 @@ import { persistReducer } from 'redux-persist';
 import customStorage from './cutomStorage';
 import { customLogger } from './middlewares/customLogger';
 import { rtkQueryErrorLogger } from './middlewares/rtkQueryErrorLogger';
-import authSlice from './slices/authSlice';
 import { medleyApi } from '@/api/baseQueries';
 
-const rootReducer = combineReducers({
-  auth: authSlice,
-});
+const rootReducer = combineReducers({});
 
 const persistedReducers = persistReducer(
   {
-    key: 'nextjs/mui', //Update KEY
+    key: 'medley/api',
     version: 1,
     storage: customStorage,
   },

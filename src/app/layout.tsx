@@ -1,12 +1,18 @@
 import type { Metadata } from 'next';
-import '@/styles/globals.css';
+import { Inter } from 'next/font/google';
 import NextTopLoader from 'nextjs-toploader';
 import { Providers } from '@/redux/providers';
 
+import '@/styles/globals.css';
+
 export const metadata: Metadata = {
-  title: 'Next, MUI, Redux Toolkit, TailwindCss',
-  description: 'Boilerplate for Nextjs with MUI and TailwindCss',
+  title: 'Payout Dashboard',
+  description: 'Dashboard Details',
 };
+
+
+const inter = Inter({ subsets: ['latin'] });
+
 
 export default function RootLayout({
   children,
@@ -15,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className={inter.className}>
         <NextTopLoader color="#004CCC" height={4} showSpinner={false} />
         <Providers>
             {children}

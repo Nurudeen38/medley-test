@@ -1,6 +1,7 @@
 // @ts-nocheck
 import React from 'react';
 import Select from 'react-dropdown-select';
+import { Label } from './common.styled';
 
 type Option = {
   label: string;
@@ -27,9 +28,9 @@ const CustomDropdown: React.FC<CustomDropdownProps> = ({
   return (
     <div>
       {label && (
-        <label className="text-black tracking-[-0.7px] text-base font-semibold mb-2 inline-block">
+        <Label>
           {label}
-        </label>
+        </Label>
       )}
       <Select
         searchable={false}
