@@ -1,4 +1,4 @@
-import { CSSProperties, FunctionComponent, ReactNode } from 'react';
+import React, { CSSProperties, FunctionComponent, ReactNode } from 'react';
 
 type SpinnerPosition = 'default' | 'fullscreen';
 type SpinnerVariant = 'dot-flashing' | 'dot-spin';

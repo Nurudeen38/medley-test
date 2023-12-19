@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React from 'react';
 import Select from 'react-dropdown-select';
 import { Label } from './common.styled';
@@ -13,7 +12,7 @@ type CustomDropdownProps = {
   placeholder?: string;
   value: string;
   label?: string;
-  onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+  onChange?: (e: string) => void;
 };
 
 const CustomDropdown: React.FC<CustomDropdownProps> = ({
@@ -27,19 +26,15 @@ const CustomDropdown: React.FC<CustomDropdownProps> = ({
   const option = options.find((option) => option.value === value);
   return (
     <div>
-      {label && (
-        <Label>
-          {label}
-        </Label>
-      )}
+      {label && <Label>{label}</Label>}
       <Select
         searchable={false}
         dropdownHandle
         options={options}
-        values={option && [option]}
+        values={option ? [option] : []}
         onChange={(values: Option[]) => {
           const selectedValue: string = values.length ? values[0].value : '';
-          onChange(selectedValue);
+          onChange?.(selectedValue);
         }}
         placeholder={placeholder}
         className="!border-dotted !border !border-secondary !rounded-2xl"

@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import {
   EmptyTable,
   Table as StyledTable,
@@ -17,7 +17,7 @@ type Props<T> = {
   columns: {
     accessor: string;
     label: string;
-    format?: (value: any) => ReactNode;
+    format?: (value: T[keyof T]) => ReactNode;
     sortable?: boolean;
   }[];
   rows: Array<T>;

@@ -234,3 +234,7 @@
 .w-18 {
   width: 48px;
 }
+
+.disabled {
+  cursor: not-allowed;
+}

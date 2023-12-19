@@ -79,7 +79,7 @@ export default function Home() {
     setSearchTerm(e.target.value);
   };
 
-  const handleLimitChange = (e: any) => {
+  const handleLimitChange = (e: string) => {
     setLimit(e);
   };
 

@@ -8,12 +8,12 @@ export default function Search({
 }) {
   return (
     <SearchBox>
+      <SearchIcon className="fa fa-search" />
       <SearchInput
         type="search"
         placeholder="Search by User Name"
         onChange={onChange}
       />
-      <SearchIcon className="fa fa-search" />
     </SearchBox>
   );
 }

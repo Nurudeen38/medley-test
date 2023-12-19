@@ -1,4 +1,3 @@
-import { PiSpinner } from 'react-icons/pi';
 import styled from 'styled-components';
 
 export const Main = styled.main`
@@ -27,7 +26,6 @@ export const SubTitle = styled(Title)`
 export const Container = styled.div`
   padding: 2rem;
 `;
-
 
 export const SubHeaderContainer = styled.div`
   display: flex;
