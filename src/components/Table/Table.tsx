@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import {
+  EmptyTable,
   Table as StyledTable,
   Tbody,
   Td,
@@ -48,6 +49,11 @@ const Table = <T extends { username?: string }>({
             </ThRow>
           </Thead>
           <Tbody>
+            {rows.length === 0 && !isLoading && (
+              <tr>
+                <EmptyTable colSpan={4}>No data</EmptyTable>
+              </tr>
+            )}
             {rows?.map((row) => {
               return (
                 <Trow key={row.username}>

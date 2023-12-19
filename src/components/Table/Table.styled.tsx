@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Table = styled.table`
   width: 100%;
@@ -33,4 +33,11 @@ export const Td = styled.td`
   font-weight: 600;
   color: #6f767e;
   text-align: center;
+`;
+
+export const EmptyTable = styled.td`
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 0.7rem;
+  color:#6f767e;
 `;
